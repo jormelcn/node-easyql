@@ -1,0 +1,21 @@
+{
+  "name": "easyql",
+  "version": "0.0.1",
+  "description": "Sql module for easy live",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "sql",
+    "mysql",
+    "mariadb",
+    "easy"
+  ],
+  "author": "Jorge Narvaez",
+  "license": "MIT",
+  "dependencies": {
+    "debug": "^3.1.0",
+    "mariasql": "^0.2.6"
+  }
+}
