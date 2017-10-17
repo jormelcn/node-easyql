@@ -9,6 +9,8 @@ var Easyql = function () {
     
 };
 
+Easyql.errorHandler = null;
+
 Easyql.init = function init(config) {
     connectInfo = config;
 };
