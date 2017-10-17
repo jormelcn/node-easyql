@@ -1,11 +1,12 @@
 {
   "name": "easyql",
-  "version": "0.0.1",
+  "version": "0.0.5",
   "description": "Sql module for easy live",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "homepage": "https://gitlab.com/jormelcn/node-easyql",
   "repository": {
     "type": "git",
     "url": "https://gitlab.com/jormelcn/node-easyql.git"
