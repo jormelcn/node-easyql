@@ -1,26 +1,22 @@
-var Transaction = require('./lib/Transaction');
-var connectInfo = null;
-
-var Client = require('mariasql');
 
 var Easyql = function () {
     
 };
 
+Easyql.Transaction = require('./lib/Transaction')(Easyql);
+Easyql.Query = require('./lib/Query')(Easyql);
+Easyql.Commiter = require('./lib/Commiter')(Easyql);
 Easyql.debug = require('debug')('Easyql');
-
 Easyql.errorHandler = null;
 
 Easyql.init = function init(config) {
-    connectInfo = config;
+    Easyql.connectInfo = config;
+    Easyql.Client = require('mariasql');
 };
 
 Easyql.connect = function connect() {
-    var client = new Client(connectInfo);
-    return new Transaction(client);
+    return new Easyql.Transaction(new Easyql.Client(Easyql.connectInfo));
 };
-
-Transaction.init(Easyql);
 
 module.exports = Easyql;
 
