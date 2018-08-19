@@ -1,15 +1,16 @@
 {
   "name": "easyql",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Sql module for easy live",
-  "main": "index.js",
+  "main": "./dist/easyql.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc",
+    "test": "node test.js"
   },
-  "homepage": "https://gitlab.com/jormelcn/node-easyql",
+  "homepage": "https://github.com/jormelcn/node-easyql",
   "repository": {
     "type": "git",
-    "url": "https://gitlab.com/jormelcn/node-easyql.git"
+    "url": "https://github.com/jormelcn/node-easyql.git"
   },
   "keywords": [
     "sql",
@@ -19,8 +20,22 @@
   ],
   "author": "Jorge Narvaez",
   "license": "MIT",
+  "devDependencies": {
+    "typescript": "^2.3.2"
+  },
   "dependencies": {
+    "@types/debug": "0.0.30",
+    "@types/mariasql": "^0.1.29",
+    "@types/mocha": "^2.2.46",
+    "@types/node": "^9.3.0",
     "debug": "^3.1.0",
+    "easyerror": "^0.1.1",
+    "easypool": "^0.9.0",
     "mariasql": "^0.2.6"
-  }
+  },
+  "files": [
+    "Readme.md",
+    "index.js",
+    "dist/"
+  ]
 }
